@@ -1,0 +1,208 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ADAK - Assistência Técnica de Celulares</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <style>
+        :root {
+            --azul-escuro: #0a192f;
+            --verde-adak: #2ecc71;
+            --branco: #ffffff;
+            --cinza-claro: #f4f4f4;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+
+        body {
+            background-color: var(--azul-escuro);
+            color: var(--branco);
+            line-height: 1.6;
+        }
+
+        /* --- CABEÇALHO COM LOGO PNG --- */
+        header {
+            background-color: rgba(10, 25, 47, 0.95);
+            padding: 0.5rem 5%; /* Diminuí um pouco o padding para a logo respirar */
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            border-bottom: 2px solid var(--verde-adak);
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+        }
+
+        .logo-container {
+            display: flex;
+            align-items: center;
+        }
+
+        .logo-img {
+            height: 50px; /* Ajuste a altura conforme o formato da sua logo */
+            width: auto;  /* Mantém a proporção */
+            display: block;
+            transition: transform 0.3s ease;
+        }
+
+        .logo-img:hover {
+            transform: scale(1.05); /* Efeito sutil ao passar o mouse */
+        }
+
+        nav a {
+            color: var(--branco);
+            text-decoration: none;
+            margin-left: 20px;
+            transition: 0.3s;
+            font-weight: 500;
+        }
+
+        nav a:hover {
+            color: var(--verde-adak);
+        }
+
+        /* Hero Section */
+        .hero {
+            padding: 80px 5%;
+            text-align: center;
+            background: linear-gradient(rgba(10, 25, 47, 0.8), rgba(10, 25, 47, 0.8)), 
+                        url('https://images.unsplash.com/photo-1512428559083-a4051ba836c5?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80');
+            background-size: cover;
+            background-position: center;
+        }
+
+        .hero h1 { font-size: 3rem; margin-bottom: 1rem; }
+        .hero p { font-size: 1.2rem; color: var(--cinza-claro); margin-bottom: 2rem; }
+
+        .btn-contato {
+            background-color: var(--verde-adak);
+            color: var(--azul-escuro);
+            padding: 12px 30px;
+            border-radius: 5px;
+            text-decoration: none;
+            font-weight: bold;
+            transition: 0.3s;
+            display: inline-block;
+        }
+
+        .btn-contato:hover {
+            background-color: var(--branco);
+            transform: scale(1.05);
+        }
+
+        /* Serviços */
+        .servicos {
+            padding: 60px 5%;
+            background-color: var(--branco);
+            color: var(--azul-escuro);
+            text-align: center;
+        }
+
+        .grid-servicos {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 20px;
+            margin-top: 40px;
+        }
+
+        .card {
+            padding: 30px;
+            border: 1px solid #ddd;
+            border-radius: 10px;
+            transition: 0.3s;
+        }
+
+        .card:hover {
+            border-color: var(--verde-adak);
+            box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+        }
+
+        /* Localização */
+        .localizacao { padding: 60px 5%; text-align: center; }
+        .info-local {
+            background: rgba(255,255,255,0.05);
+            padding: 30px;
+            border-radius: 10px;
+            display: inline-block;
+            margin-top: 20px;
+        }
+
+        footer {
+            background-color: #050c16;
+            text-align: center;
+            padding: 20px;
+            border-top: 1px solid #1a2a44;
+            font-size: 0.9rem;
+        }
+
+        @media (max-width: 768px) {
+            .hero h1 { font-size: 2rem; }
+            nav { display: none; }
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <!-- ALTERAÇÃO AQUI: Substituímos o texto pela tag <img> -->
+        <a href="#inicio" class="logo-container">
+            <img src="caminho-da-sua-logo/logo.png" alt="ADAK Assistência" class="logo-img">
+        </a>
+        
+        <nav>
+            <a href="#inicio">Início</a>
+            <a href="#servicos">Serviços</a>
+            <a href="#contato">Localização</a>
+        </nav>
+    </header>
+
+    <section class="hero" id="inicio">
+        <h1>Especialistas em Celulares</h1>
+        <p>Sua assistência técnica de confiança em Belterra.</p>
+        <a href="https://wa.me/seunumeroaqui" class="btn-contato">Solicitar Orçamento</a>
+    </section>
+
+    <!-- O restante do conteúdo permanece igual -->
+    <section class="servicos" id="servicos">
+        <h2>Nossos Serviços</h2>
+        <div class="grid-servicos">
+            <div class="card">
+                <h3>Troca de Tela</h3>
+                <p>Telas originais e similares com a melhor qualidade do mercado.</p>
+            </div>
+            <div class="card">
+                <h3>Baterias</h3>
+                <p>Substituição rápida para seu celular durar o dia todo.</p>
+            </div>
+            <div class="card">
+                <h3>Reparo em Placa</h3>
+                <p>Soluções avançadas para aparelhos que não ligam ou molharam.</p>
+            </div>
+            <div class="card">
+                <h3>Software</h3>
+                <p>Formatação, atualização e desbloqueios em geral.</p>
+            </div>
+        </div>
+    </section>
+
+    <section class="localizacao" id="contato">
+        <h2>Onde Estamos</h2>
+        <div class="info-local">
+            <p>Estamos localizados no coração de <b>Belterra</b>.</p>
+            <p>Endereço: Centro - Belterra, PA</p>
+            <p>Horário: Seg a Sex: 08h às 18h | Sáb: 08h às 12h</p>
+        </div>
+    </section>
+
+    <footer>
+        &copy; 2026 ADAK Assistência Técnica - Todos os direitos reservados.
+    </footer>
+
+</body>
+</html>
